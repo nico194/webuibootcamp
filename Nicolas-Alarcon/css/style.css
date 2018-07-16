@@ -1,0 +1,66 @@
+h1{
+  text-align: center;
+}
+
+.row{
+  margin-top: 30px;
+}
+
+.col-12{
+  margin-top: 10px;
+}
+
+.reloj{
+  height: 150px;
+  text-align: center;
+}
+
+.dias{
+  background-color: rgb(62, 94, 60);
+}
+
+.dias p{
+  padding-top: 20px;
+  display: inline-block;
+  line-height: 20px;
+  font-size: 40px;
+  color: #FFFFFF;
+}
+
+.horas{
+  background-color: rgb(82, 162, 72);
+  height: 80px;
+
+}
+
+.horas p{
+  display: inline-block;
+  line-height: 3px;
+  font-size: 60px;
+  padding-top: 30px;
+  color: #FFFFFF;
+}
+
+#ampm{
+  font-size: 30px
+}
+
+.img{
+  width: 500px;
+  height: 200px;
+  animation-name: animacion;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes animacion {
+  0%{
+    opacity: 0;
+    margin-left: 100%;
+  }
+  100%{
+    opacity: 1;
+    margin-left: 0%;
+  }
+}

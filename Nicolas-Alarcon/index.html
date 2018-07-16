@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12">
+          <h1>Ejercicios para el Bootcamp de Globant</h1><br>
+        </div>
+      </div>
+
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link" href="#ej1">Ejercicio 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#ej2">Ejercicio 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#ej3">Ejercicio 3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#ej4">Ejercicio 4</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#ej5">Ejercicio 5</a>
+        </li>
+      </ul>
+
+      <div class="row">
+        <div class="col-12">
+          <h3 id="ej1">Ejercicio N° 1</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-8">
+          <h5>Presiona el botón para cambiar el fondo: </h3>
+        </div>
+        <div class="col-4">
+          <button class="btn btn-primary" onclick="cambiarColor();">Cambiar Color</button><br>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <h3 id="ej2">Ejercicio N° 2</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <h5>Reloj digital: </h3>
+        </div>
+
+        <div class="col-8" >
+          <div class="reloj">
+            <div class="dias">
+              <p id="diaSemana">Lunes</p>
+              <p id="dia">dia</p>
+              <p> de </p>
+              <p id="mes">mes</p>
+              <p> del </p>
+              <p id="año">año</p>
+            </div>
+              <div class="horas">
+              <p id="hr"></p>
+              <p> : </p>
+              <p id="min">minuto</p>
+              <p> : </p>
+              <p id="seg">segundo</p>
+              <p id="ampm"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <h3 id="ej3">Ejercicio N° 3</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <h5>Animación con KeyFrame: </h5>
+        </div>
+        <div class="col-8">
+          <img src="https://planetatrabajo.com.ar/wp-content/uploads/2017/06/MX50844LOGO-2.jpg" alt="Globant" class="img">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <h3 id="ej4">Ejercicio N° 4</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h3 style="text-align: center;">Formulario</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <form action="" name="formulario" method="get" id="form1">
+            <div class="form-group">
+              <label for="tituloForm">Título</label>
+              <input class="form-control" type="text" name="titulo" id="txtTitulo" placeholder="Ingrese aqui su título..." >
+            </div>
+            <div class="form-group">
+              <label for="descripcionForm">Descripción</label>
+              <input class="form-control" type="text" name="descripcion" id="txtDescripcion" placeholder="Ingrese aqui su descripción..." >
+            </div>
+            <div class="form-group">
+              <label for="archivoForm">Archivo</label>
+              <input class="form-control-file" type="file" name="archivo" id="flArchivo" >
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="checkCondiciones" name="condiciones" >
+              <label class="form-check-label" for="checkCondiciones">Acepto términos y condiciones</label>
+            </div>
+            <button class="btn btn-primary" onclick="crear();">Crear</button>
+          </form>
+        </div>
+        <div class="col-6">
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <h3 id="ej5">Ejercicio N° 5</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h5>Array de Personas: </h5>
+        </div>
+      </div>
+
+      
+
+    </div>
+
+
+    <script src="./js/javascript.js"></script>
+</body>
+</html>
