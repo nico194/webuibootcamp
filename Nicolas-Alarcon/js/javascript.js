@@ -122,3 +122,68 @@ function validarCondiciones() {
     return true;
   }
 }
+
+function crearArrayPersonas() {
+  const arrayPersonas = new Array();
+
+  var persona1 = {
+    nombre: 'Nicolas',
+    apellido: 'Alarcon',
+    edad: 25
+  }
+
+  var persona2 = {
+    nombre: 'Paulina',
+    apellido: 'Isa',
+    edad: 25
+  }
+
+  var persona3 = {
+    nombre: 'Esteban',
+    apellido: 'Soler',
+    edad: 25
+  }
+
+  var persona4 = {
+    nombre: 'Matias',
+    apellido: 'Aybar',
+    edad: 25
+  }
+
+  var persona5 = {
+    nombre: 'Mariana',
+    apellido: 'Loran',
+    edad: 25
+  }
+
+  arrayPersonas.push(persona1);
+  arrayPersonas.push(persona2);
+  arrayPersonas.push(persona3);
+  arrayPersonas.push(persona4);
+  arrayPersonas.push(persona5);
+
+  return arrayPersonas;
+}
+
+function recorrerArray() {
+  const table = document.getElementById("tablaPersona");
+  const array = crearArrayPersonas();
+  for (var i = 0; i < array.length; i++) {
+    var parenttbl = document.createElement('tr');
+
+    var newel1 = document.createElement('td');
+    newel1.innerHTML = array[i].nombre;
+    parenttbl.appendChild(newel1);
+
+    var newel2 = document.createElement('td');
+    newel2.innerHTML = array[i].apellido;
+    parenttbl.appendChild(newel2);
+
+    var newel3 = document.createElement('td');
+    newel3.innerHTML = array[i].edad;
+    parenttbl.appendChild(newel3);
+
+    table.appendChild(parenttbl);
+
+  }
+}
