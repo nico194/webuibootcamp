@@ -75,16 +75,19 @@ function getRandomColor() {
 }())
 
 function crear() {
-  validarTitulo();
-  validarDescripcion();
-  validarArchivo();
-  validarCondiciones();
+  if (validarTitulo() && validarDescripcion() && validarArchivo() && validarCondiciones()) {
+    alert('Se completó el formulario con éxito');
+  }
 }
+
 
 function validarTitulo() {
   const formulario = document.getElementById('form1');
   if (formulario.titulo.value == 0) {
     alert('No completo el campo Título');
+    return false;
+  }else{
+    return true;
   }
 
 }
@@ -93,6 +96,9 @@ function validarDescripcion() {
   const formulario = document.getElementById('form1');
   if (formulario.descripcion.value == 0) {
     alert('No completo el campo Descripción');
+    return false;
+  }else{
+    return true;
   }
 
 }
@@ -101,6 +107,9 @@ function validarArchivo() {
   const formulario = document.getElementById('form1');
   if (formulario.archivo.value == "") {
     alert('No subió un archivo');
+    return false;
+  }else{
+    return true;
   }
 }
 
@@ -108,5 +117,8 @@ function validarCondiciones() {
   const formulario = document.getElementById('form1');
   if(formulario.condiciones.checked == false){
     alert('Acepte las condiciones para continuar');
+    return false;
+  }else{
+    return true;
   }
 }

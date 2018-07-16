@@ -114,7 +114,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <form action="" name="formulario" method="get" id="form1">
+          <form name="formulario" id="form1">
             <div class="form-group">
               <label for="tituloForm">Título</label>
               <input class="form-control" type="text" name="titulo" id="txtTitulo" placeholder="Ingrese aqui su título..." >
@@ -131,7 +131,7 @@
               <input type="checkbox" class="form-check-input" id="checkCondiciones" name="condiciones" >
               <label class="form-check-label" for="checkCondiciones">Acepto términos y condiciones</label>
             </div>
-            <button class="btn btn-primary" onclick="crear();">Crear</button>
+            <button class="btn btn-primary" onclick="crear(); return false;">Crear</button>
           </form>
         </div>
         <div class="col-6">
@@ -150,7 +150,7 @@
         </div>
       </div>
 
-      
+
 
     </div>
 
