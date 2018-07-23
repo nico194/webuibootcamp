@@ -125,8 +125,25 @@ function showRecipes(array){
       ing.innerHTML = el.ingredient
       ing.style.color = 'white'
       listIngredients.appendChild(ing) ;
-    })
+    });
 
+    const rowArticleSteps = document.createElement('div')
+    const divArticleSteps = document.createElement('div');
+    divArticleSteps.className = 'col-12';
+    const titleSteps = document.createElement('h4');
+    titleSteps.innerHTML = 'Pasos a Seguir: ';
+    titleSteps.style.color = 'white';
+    const listSteps = document.createElement('ol')
+    element.steps.forEach( (el) => {
+      const st = document.createElement('li');
+      st.innerHTML = el.step
+      st.style.color = 'white'
+      listSteps.appendChild(st) ;
+    });
+
+    divArticleSteps.appendChild(titleSteps);
+    divArticleSteps.appendChild(listSteps);
+    rowArticleSteps.appendChild(divArticleSteps);
     divArticleIngredients.appendChild(titleIngredients);
     divArticleIngredients.appendChild(listIngredients);
     rowArticleIngredients.appendChild(divArticleIngredients);
@@ -138,6 +155,7 @@ function showRecipes(array){
     elementArticleTAR.appendChild(rowArticleTitle);
     elementArticleTAR.appendChild(rowArticleDescription);
     elementArticleTAR.appendChild(rowArticleIngredients);
+    elementArticleTAR.appendChild(rowArticleSteps);
     elementArticleIMG.appendChild(img);
     elementArticle.appendChild(elementArticleTAR);
     elementArticle.appendChild(elementArticleIMG);
