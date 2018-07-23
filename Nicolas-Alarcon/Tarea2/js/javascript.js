@@ -187,7 +187,7 @@ buttonNav.innerHTML = 'Buscar';
 
 
 buttonNav.addEventListener('click', () => {
-  console.console.log(inputNav.value);
+  console.log(inputNav.value);
 });
 
 formNav.appendChild(inputNav);
