@@ -216,11 +216,7 @@ inputNav.placeholder = 'Busca tu receta aquí...'
 inputNav.className = 'form-control mr-sm-2';
 buttonNav.className = 'btn btn-primary my-2 my-sm-0';
 buttonNav.innerHTML = 'Buscar';
-
-
-buttonNav.addEventListener('click', () => {
-  console.log(inputNav.value);
-});
+buttonNav.type = 'button';
 
 formNav.appendChild(inputNav);
 formNav.appendChild(buttonNav);
@@ -275,12 +271,28 @@ const divArticle = document.createElement('div');
 divArticle.id = 'articleRecipes';
 const article = document.createElement('article');
 
-let elementsArticle
-if (bandSearch) {
-   elementsArticle = showRecipes(arrayRecipes);
-}else {
-   elementsArticle = document.createElement('div');
-}
+let elementsArticle = showRecipes(arrayRecipes);
+
+const results = [];
+buttonNav.addEventListener('click', () => {
+
+  arrayRecipes.forEach( (el) => {
+    let recipeTitle = inputNav.value;
+    console.log(recipeTitle + ' ' + el.title);
+    if(el.title.indexOf(recipeTitle) >= 0) {
+        results.push(el);
+        console.log('entro');
+    }
+  });
+
+
+  elementsArticle.innerHTML = '';
+  elementsArticle = showRecipes(results);
+
+  article.appendChild(elementsArticle);
+  divArticle.appendChild(article);
+
+});
 
 article.appendChild(elementsArticle);
 divArticle.appendChild(article);
